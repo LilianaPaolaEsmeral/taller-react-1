@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from './Card';
 
 const PeticionApi = () => {
     const [siguiente, setSiguiente] = React.useState("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20");
@@ -29,7 +30,7 @@ const PeticionApi = () => {
     }
     React.useEffect(() => {
         obtenerPersonajes(siguiente);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const obtenerDetalle = async (url) => {
@@ -46,25 +47,21 @@ const PeticionApi = () => {
         obtenerPersonajes(siguiente);
     }
     return (
-        <div>
+        <div className='container'>
             <h1>
                 Peticion a PokeApi
             </h1>
-            <button onClick={atras}>Atrás</button>
-            <button onClick={sigiente}>Siguiente</button>
-            {
-                listaPokemones.map(({id,nombre,foto,habilidades})=> (
-                    <div key={id}>
-                        <h4>{id}. {nombre}</h4>
-                        <img src={foto} alt={nombre} />
-                        <ul>
-                            {
-                                habilidades.map((item,index) => <li key={index}>{item}</li>)
-                            }
-                        </ul>
-                    </div>
-                ))
-            }
+            <div className='col-12 d-flex justify-content-between'>
+                <button onClick={atras} type="button" className="btn btn-primary">Atrás</button>
+                <button onClick={sigiente} type="button" className="btn btn-primary">Siguiente</button>
+            </div>
+            <div className="row justify-content-center">
+                {
+                    listaPokemones.map(({ id, nombre, foto, habilidades }) => (
+                        <Card key={id} id={id} nombre={nombre} foto={foto} descripcion={habilidades}/>
+                    ))
+                }
+            </div>
         </div>
     )
 }
