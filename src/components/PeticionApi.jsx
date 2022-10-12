@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './Card';
+import "../index.css"
 
 const PeticionApi = () => {
     const [siguiente, setSiguiente] = React.useState("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20");
@@ -48,7 +49,7 @@ const PeticionApi = () => {
     }
     return (
         <div className='container'>
-            <h1>
+            <h1 className='title text-center mt-2'>
                 Peticion a PokeApi
             </h1>
             <div className='col-12 d-flex justify-content-between'>
