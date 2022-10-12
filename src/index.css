@@ -23,3 +23,7 @@ code {
 .btn{
   color: lightgoldenrodyellow;
 }
+
+.btn-primary{
+  background-color: #0570b4;
+}
