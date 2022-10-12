@@ -6,24 +6,37 @@ body {
   background-color: #fecd03;
 
 }
+
 ::-webkit-scrollbar {
   width: 0;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-.card{
+.card {
   width: 18rem;
   background-color: #0570b4;
-  color: lightgoldenrodyellow;
+  color: #efeee1;
+  border-radius: 6%;
 }
 
-.btn{
-  color: lightgoldenrodyellow;
+.btn {
+  color: #efeee1
 }
 
-.btn-primary{
+.btn-primary {
   background-color: #0570b4;
+}
+
+.title {
+  background-color: #0570b4;
+  border-color: #04507f;
+  border-style: solid;
+  border-width: 5%;
+  border-radius: 6%;
+  color: #efeee1;
+  font-size: xxx-large;
 }
