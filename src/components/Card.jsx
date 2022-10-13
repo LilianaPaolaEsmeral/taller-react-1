@@ -3,7 +3,7 @@ import "../index.css"
 
 const Card = ({ id,nombre, descripcion, foto }) => {
     return (
-        <div className="card m-3">
+        <div className="card m-3 shadow">
             <img src={foto} className="card-img-top" alt={nombre} />
             <div className="card-body">
                 <h4 className="card-title">{id}. {nombre}</h4>
